@@ -266,6 +266,56 @@ span.hover-information {
 }
 
 /* =========================== 
+Form Styles 
+============================== */
+.searchbox-container {	
+	padding     : 10px 20px;
+	display     : block;
+	margin      : 0;
+	text-align  : center;
+}
+
+.form-container {
+	position   : relative;
+	padding    : 15px 0;
+	max-width  : 460px;
+	margin     : 0 auto;
+}
+/* Input Styles */
+input[placeholder="Search"] {
+	color: #0D5389;
+}
+input[type="text"] {
+	position       : relative;
+	z-index        : 99;
+	font-size      : 16px;
+	font-weight    : normal !important;
+	border-radius  : 6px;
+	border         : 10px solid #0D5389;
+	outline        : none;
+	padding        : .5em .75em;
+	width          : 100%;
+	transition     : 0.75s;
+}
+input[type="text"]:focus {
+	border      : 3px solid #A3F7F5;
+	background  : black;
+}
+input[type="search"] {
+	outline: none;
+	border: none;
+	transition: all 0.67s;
+	border-radius: 2px;
+}
+input[type="search"]:focus {
+  	box-shadow: -0.2px 1px 17px aquamarine;
+}
+
+.search-button:focus {
+
+}
+
+/* =========================== 
 Footer Styles
 ============================== */
 .footer {
@@ -282,42 +332,6 @@ Footer Styles
 	text-shadow     : 1px 1px 4px black;
 	font-weight     : bold;
 	text-transform  : capitalize;
-}
-
-/* =========================== 
-Form Styles 
-============================== */
-.searchbox-container {	
-	padding     : 10px 20px;
-	display     : block;
-	text-align  : center;
-	margin      : 0;
-}
-.form-container {
-	position   : relative;
-	padding    : 15px 0;
-	max-width  : 460px;
-	margin     : 0 auto;
-}
-/* Input Styles */
-input[placeholder] {
-	color: #0D5389;
-}
-input[type=text] {
-	position       : relative;
-	z-index        : 99;
-	font-size      : 16px;
-	font-weight    : normal !important;
-	border-radius  : 6px;
-	border         : 10px solid #0D5389;
-	outline        : none;
-	padding        : .5em .75em;
-	width          : 100%;
-	transition     : 0.75s;
-}
-input[type=text]:focus {
-	border      : 3px solid #A3F7F5;
-	background  : black;
 }
 
 /* ============================== 
