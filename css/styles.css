@@ -1,14 +1,16 @@
-/* ================================= 
+/* =================================
 Basic Global Styles
 ==================================== */
+
 *,
 *::before,
 *::after {
-	box-sizing     : border-box;
+	box-sizing: border-box;
 }
 
 html {
-	background: #3B9DED;
+	background: #55B0ED;
+	background: linear-gradient(to bottom right, #83DBE2, #2C84F7, #154B77, #0C385B);
 }
 
 body {
@@ -22,46 +24,45 @@ p {
 	color: #282828;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
 	color       : #333333; /* Change Color to your favorite one */
 	text-align  : center;
 }
 h1 {
-	font-family     : 'Chewy', cursive;/* Google Fonts */
-	text-shadow     : 1px 1px 3px rgba(0,0,0,.75);
-	margin          : 0 !important;
-	padding         : 10px 0;
-	font-weight     : 400;
-	letter-spacing  : 1px;
-	font-size       : 1em;
-	color           : white;
+	font-family  : 'Carter One', cursive; /* Google Fonts */
+	text-shadow  : 1px 1px 3px rgba(0,0,0,.75);
+	margin       : 0 !important;
+	padding      : 0;
+	font-weight  : 400;
+	font-size    : 1em;
+	color        : white;
 }
 
-/* ============================== 
+/* ==============================
 Basic Layout Styles
 ================================= */
 .container::before {
 	content         : "Click Anywhere to Close(X)";
-    font-size       : .75em;
+  font-size       : .75em;
 	text-align      : center;
 	text-transform  : uppercase;
 	color           : white;
-    padding         : 1.5em;
-    width           : 100%;
+  padding         : 1.5em;
+  width           : 100%;
 	position        : fixed;
-    top             : 0;
+  top             : 0;
 	left            : 0;
 	z-index         : 999;
 }
 /* Overlay mode - Background Styles */
-.container { 
+.container {
 	cursor      : url(../img/photos/close-button.png), crosshair;
-    position    : fixed;
+  position    : fixed;
 	top         : 0;
 	left        : 0;
 	z-index     : 998;
@@ -70,9 +71,9 @@ Basic Layout Styles
 	display     : none;
 	margin      : 0 auto;
 	background  : rgba(0,0,0,.75);
-	box-shadow  : inset 0px 20px 40px 0px rgba(0,0,0,0.66), 
-                  inset 0px 20px 40px 0px rgba(0,0,0,0.66), 
-                  inset 0px 20px 40px 0px rgba(0,0,0,0.66);
+	box-shadow  : inset 0px 20px 40px 0px rgba(0,0,0,0.66),
+                inset 0px 20px 40px 0px rgba(0,0,0,0.66),
+                inset 0px 20px 40px 0px rgba(0,0,0,0.66);
 }
 
 /* ---- Overlay Styles ---- */
@@ -121,7 +122,7 @@ Basic Layout Styles
 /* ---- Overlay Arrow Styles ---- */
 .left-arrow {
 	display              : none;
-    cursor               : pointer;
+  cursor               : pointer;
 	background           : url(../img/photos/left-arrow.png);
 	background-position  : center;
 	background-repeat    : no-repeat;
@@ -150,26 +151,28 @@ Basic Layout Styles
 	color                : rgba(0,0,0,0.85);
 }
 
-/* ============================== 
-Page Styles 
+/* ==============================
+Page Styles
 ================================= */
 .document-container {
 	width           : 100%;
 	padding-bottom  : 70px;
 	min-height      : calc(100vh - 36px); /* Sticky Footer Fixed ON ALL SCREENS - FIXED */
 }
+
+/* Main Header - Top Navigation */
 .main-header {
 	position        : fixed;
 	width           : 100%;
-	top             : 0; 
+	top             : 0;
 	left            : 0;
 	z-index         : 960;
-	background      : #0D5389;
-	padding-bottom  : 20px;
+	background      : #013B6B; /* Dark Thick Blue For Top Navigation */
+	padding         : 10px 0;
 	box-shadow      : 0 3px 6px rgba(0,0,0,.5);
 }
 
-/* The Interactive Gallery Styles */
+/* Base Gallery Styles */
 .gallery {
 	display     : block;
 	max-width   : 980px; /* Must be 980px as described in the requirements */
@@ -177,14 +180,6 @@ Page Styles
 	margin-top  : 170px;
 	font-size   : 0px; /* There is white-spaced only because of the inline-block at the bottom */
 	text-align  : center;
-}
-.col, 
-.col-hide {
-	position       : relative;
-	display        : inline-block;
-	margin         : 30px; /* Must be 60px apart */
-	box-shadow     : 1px 1px 20px #2D61E5;
-	border-radius  : 6px;
 }
 
 .video:focus,
@@ -200,6 +195,15 @@ Page Styles
 	border-radius  : 6px;
 }
 
+.col,
+.col-hide {
+	position       : relative;
+	display        : inline-block;
+	margin         : 30px; /* Must be 60px apart */
+	border-radius  : 6px;
+	box-shadow     : 1px 1px 12px #282828;
+}
+
 span.hover-information {
 	position    : absolute;
 	bottom      : 0;
@@ -211,13 +215,14 @@ span.hover-information {
 	position       : absolute;
 	top            : 0;
 	z-index        : 100;
-	font-size      : 13.5px;
+	font-size      : 14px;
 	text-align     : left;
 	margin         : 0;
 	width          : 200px;
 	color          : white;
-	background     : #007ACC;
-	border         : 4px solid #0D5389;
+	background     : #013B6B;
+	border         : 2px solid #BDF9F9;
+	box-shadow     : 1px 1px 24px #BDF9F9;
 	opacity        : 0;
 	border-radius  : 5px;
 	transition     : 0.5s;
@@ -229,11 +234,11 @@ span.hover-information {
 	content     : url(../img/photos/view-icon.png);
 	position    : absolute;
 	bottom      : 10px;
-	left        : 86px;
-	transition  : 0.4s ease-out;
+	left        : 85px;
+	transition  : 0.5s ease-out;
 }
 .hover-information:hover::after {
-	transform: scale(1.4); /* Icon will grow when you hover a gallery item */
+	transform: scale(1.5); /* Icon will grow when you hover a gallery item */
 }
 .hover-style { /* Heading for each image you hover */
 	text-transform  : capitalize;
@@ -258,7 +263,7 @@ span.hover-information {
 	top         : 40vh;
 	left        : 0;
 	right       : 0;
-	margin      : 5% auto; 
+	margin      : 5% auto;
 	max-width   : 500px;
 	height      : 200px;
 }
@@ -266,11 +271,12 @@ span.hover-information {
 	display: none;
 }
 
-/* =========================== 
-Form Styles 
+/* ===========================
+Form Styles
 ============================== */
-.searchbox-container {	
-	padding     : 10px 20px;
+
+.searchbox-container {
+	padding     : 15px 20px 10px;
 	display     : block;
 	margin      : 0;
 	text-align  : center;
@@ -278,13 +284,14 @@ Form Styles
 
 .form-container {
 	position   : relative;
-	padding    : 15px 0;
-	max-width  : 460px;
 	margin     : 0 auto;
 }
+
 /* Input Styles */
 input[placeholder="Search"] {
-	color: #0D5389;
+	color: #013B6B;
+	font-weight: 700;
+	font-size: 16pt;
 }
 input[type="text"] {
 	position       : relative;
@@ -295,7 +302,7 @@ input[type="text"] {
 	border         : 10px solid #0D5389;
 	outline        : none;
 	padding        : .5em .75em;
-	width          : 100%;
+	width          : 100% !important;
 	transition     : 0.75s;
 }
 input[type="text"]:focus {
@@ -303,28 +310,24 @@ input[type="text"]:focus {
 	background  : black;
 }
 input[type="search"] {
-	outline: none;
-	border: none;
-	transition: all 0.67s;
-	border-radius: 2px;
+	outline        : none;
+	border         : none;
+	transition     : all 0.67s;
+	border-radius  : 2px;
+	max-width      : 100% !important;
+	width          : 460px !important;
 }
 input[type="search"]:focus {
-  	box-shadow: -0.2px 1px 17px aquamarine;
+  	box-shadow: 0px 1px 20px aquamarine;
 }
 
-.search-button:focus {
-
-}
-
-/* =========================== 
+/* ===========================
 Footer Styles
 ============================== */
 .footer {
-	background       : #0D5389;
-	opacity          : 0.9;
+	background       : #031E33;
 	text-align       : center;
 }
-
 .copyright {
 	padding         : 20px 1em;
 	color           : white;
@@ -334,7 +337,7 @@ Footer Styles
 	text-transform  : capitalize;
 }
 
-/* ============================== 
+/* ==============================
 Responsive - Media Queries
 ================================= */
 
@@ -358,7 +361,7 @@ Responsive - Media Queries
 @media screen and (min-width: 768px) {
 	#overlay img { /* Fluid Images based on % */
 		padding-left   : 15%;
-		padding-right  : 15%; 
+		padding-right  : 15%;
 		top            : 2vh;
 	}
 	#overlay p {
@@ -383,9 +386,9 @@ Responsive - Media Queries
 }
 
 /* Desktop Range - Level 2 */
-@media screen and (min-width: 992px) {	
+@media screen and (min-width: 992px) {
 	/* 4 even List items per row (an+b) */
-	div.col:nth-of-type(4n+0), 
+	div.col:nth-of-type(4n+0),
 	div.col-hide:nth-of-type(4n+0) {
 		margin-right  : 0;
 		margin-left   : 0;
@@ -394,15 +397,15 @@ Responsive - Media Queries
 		margin-right  : 0;
 		margin-left   : 0;
 	}
-	/* Gallery styles - basic spacing 
+	/* Gallery styles - basic spacing
 	Must have a 60px pixel gap */
-	.col, 
+	.col,
 	.col-hide {
 		margin-top    : 25px;
 		margin-bottom : 25px;
 		margin-right  : 60px;
 		margin-left   : 0px;
-	}	
+	}
 }
 
 /* Desktop Range - Level 1 */
