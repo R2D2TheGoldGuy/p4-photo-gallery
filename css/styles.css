@@ -351,12 +351,6 @@ Responsive - Media Queries
 }
 
 @media screen and (max-width: 480px) {
-
-	html {
-	background: linear-gradient(#0C385B, transparent 80%), 
-	            linear-gradient(0deg, #fff, transparent), 
-	            url('../img//photos/bg-4.jpg') no-repeat center;	
-	}
 	.title h1 {
 		font-size: 24px;
 	}
@@ -398,7 +392,7 @@ Responsive - Media Queries
 	html {
 		background: linear-gradient(#22A7F0, transparent 110%), 
 					linear-gradient(to top, #fff, transparent), 
-					#2574A9 url('../img//photos/background.jpg') no-repeat center;	
+					#22A7F0 url('../img/photos/background.jpg') no-repeat center;	
 	}
 	/* 4 even List items per row (an+b) */
 	div.col:nth-of-type(4n+0),
