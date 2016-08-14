@@ -209,7 +209,7 @@ function $showImage(iL, $cT, $cC) { //Function for showing Image.
 /* ----- 
 Function 11 - (11 out of 14) 
 ----- */
-function $fadeOut(){ //Function fades out image.
+function $fadeOut() { //Function fades out image.
 	"use strict";
 	// Hide the overlay on mouse click.
 	$container.fadeOut(150);
@@ -536,11 +536,3 @@ $('#search_bar').keyup(function() {
 		}
 	}
 });
-
-//Reset [SEARCH] input field without reloading browser.
-/* $( "#reset" ).bind( "click", function(e){
-	"use strict";
-	e.preventDefault();
-	resetForm();
-	$("#search_bar").trigger("keyup");
-}); */
