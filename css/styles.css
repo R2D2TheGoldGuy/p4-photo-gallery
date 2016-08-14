@@ -47,6 +47,7 @@ h1 {
 /* ==============================
 Basic Layout Styles
 ================================= */
+
 .container::before {
 	content         : "Click Anywhere to Close(X)";
   	font-size       : .75em;
@@ -390,9 +391,9 @@ Responsive - Media Queries
 /* Desktop Range - Level 2 */
 @media screen and (min-width: 992px) {
 	html {
-		background: linear-gradient(#22A7F0, transparent 110%), 
-					linear-gradient(to top, #fff, transparent), 
-					#22A7F0 url('../img/photos/background.jpg') no-repeat center;	
+		background: linear-gradient(#22A7F0, transparent 100%),
+		linear-gradient(to top, #fff, transparent),
+		#22A7F0 url('../img/photos/background.jpg') no-repeat center !important;	
 	}
 	/* 4 even List items per row (an+b) */
 	div.col:nth-of-type(4n+0),
