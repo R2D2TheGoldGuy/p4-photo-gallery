@@ -392,8 +392,7 @@ Responsive - Media Queries
 @media screen and (min-width: 992px) {
 	html {
 		background: linear-gradient(#22A7F0, transparent 100%),
-		linear-gradient(to top, #fff, transparent),
-		#22A7F0 url('../img/photos/background.jpg') no-repeat center !important;	
+		linear-gradient(to top, #fff, transparent);
 	}
 	/* 4 even List items per row (an+b) */
 	div.col:nth-of-type(4n+0),
