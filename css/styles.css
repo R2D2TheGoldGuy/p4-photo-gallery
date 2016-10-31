@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins:400,700';
+@import url('https://fonts.googleapis.com/css?family=Coiny|Lato');
 
 /* =================================
 Basic Global Styles
@@ -11,14 +11,15 @@ Basic Global Styles
 }
 
 html {
-	background: linear-gradient(to bottom right, #83DBE2, #4183D7, #0C385B);
+	background: linear-gradient(to bottom right, #83DBE2, #6E7ABF, #5562A8);
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family  : 'Lato', sans-serif;
 	font-size    : 1em;
 	line-height  : 1.5;
 	position     : relative;
+	font-weight  : 400;
 }
 
 p {
@@ -35,13 +36,14 @@ h6 {
 	text-align  : center;
 }
 h1 {
-	font-family: 'Kaushan Script', cursive; /* Google Fonts */
-	text-shadow  : 1px 1px 1px #333;
-	margin       : 0 !important;
-	padding      : 0;
-	font-weight  : 300;
-	font-size    : 1.625em;
-	color        : white;
+	font-family     : 'Coiny', cursive; /* Google Fonts */
+	text-shadow     : 1px 2px 3px #333;
+	letter-spacing  :  0.2px;
+	margin          : 0 !important;
+	padding         : 0;
+	font-weight     : 300;
+	font-size       : 1.75em;
+	color           : white;
 }
 
 /* ==============================
@@ -50,14 +52,14 @@ Basic Layout Styles
 
 .container::before {
 	content         : "Click Anywhere to Close(X)";
-  	font-size       : .75em;
+  font-size       : .75em;
 	text-align      : center;
 	text-transform  : uppercase;
 	color           : white;
  	padding         : 1.5em;
-  	width           : 100%;
+	width           : 100%;
 	position        : fixed;
-  	top             : 0;
+  top             : 0;
 	left            : 0;
 	z-index         : 999;
 }
@@ -169,7 +171,7 @@ Page Styles
 	top             : 0;
 	left            : 0;
 	z-index         : 960;
-	background      : #22313F; /* Dark Thick Blue For Top Navigation */
+	background      : #464D77; /* Dark Thick Purple For Top Navigation */
 	padding         : 10px 0;
 	box-shadow      : 0 3px 6px rgba(0,0,0,.5);
 }
@@ -203,7 +205,6 @@ Page Styles
 	display        : inline-block;
 	margin         : 30px; /* Must be 60px apart */
 	border-radius  : 6px;
-	box-shadow     : 1px 1px 12px #282828;
 }
 
 span.hover-information {
@@ -222,25 +223,24 @@ span.hover-information {
 	margin         : 0;
 	width          : 200px;
 	color          : white;
-	background     : #031E33;
-	border         : 2px solid #BDF9F9;
-	box-shadow     : 1px 1px 24px #BDF9F9;
+	background     : #758BEF;
 	opacity        : 0;
 	border-radius  : 5px;
-	transition     : 0.5s;
+	transition     : 0.8s;
 	overflow       : hidden;
+	box-shadow     : 1px 1px 15px 1px #2C333F;
 }
 
 /* Extra Hover Icon */
 .hover-information::after {
 	content     : url(../img/photos/view-icon.png);
 	position    : absolute;
-	bottom      : 10px;
-	left        : 85px;
-	transition  : 0.5s ease-out;
+	bottom      : 20px;
+	left        : 90px;
+	transition  : 0.5s 0.25s ease-out;
 }
 .hover-information:hover::after {
-	transform: scale(1.5); /* Icon will grow when you hover a gallery item */
+	transform: scale(1.2); /* Icon will grow when you hover a gallery item */
 }
 .hover-style { /* Heading for each image you hover */
 	text-transform  : capitalize;
@@ -279,7 +279,7 @@ Form Styles
 ============================== */
 
 .searchbox-container {
-	padding     : 15px 20px 10px;
+	padding     : 20px 0px 10px;
 	display     : block;
 	margin      : 0;
 	text-align  : center;
@@ -315,13 +315,13 @@ input[type="text"]:focus {
 input[type="search"] {
 	outline        : none;
 	border         : none;
-	transition     : all 0.67s;
+	transition     : all 0.5s;
 	border-radius  : 2px;
 	max-width      : 100% !important;
 	width          : 460px !important;
 }
 input[type="search"]:focus {
-  	box-shadow: 0px 1px 20px aquamarine;
+  	box-shadow: 0 0 20px 1px aqua;
 }
 
 /* ===========================
@@ -370,7 +370,7 @@ Responsive - Media Queries
 	#overlay p {
 		font-size    : 1.2em;
 		font-weight  : 300;
-		bottom       : 7vh;
+		bottom       : 6vh;
 	}
 	.container:before {
 		display: none;
@@ -391,9 +391,7 @@ Responsive - Media Queries
 /* Desktop Range - Level 2 */
 @media screen and (min-width: 992px) {
 	html {
-		background: linear-gradient(#22A7F0, transparent 100%),
-		linear-gradient(to top, #fff, transparent),
-		#22A7F0 url('../img/photos/background.jpg') no-repeat center !important;	
+		background: linear-gradient(to bottom, floralwhite, #AAE8ED, #828DCC);
 	}
 	/* 4 even List items per row (an+b) */
 	div.col:nth-of-type(4n+0),
@@ -405,6 +403,11 @@ Responsive - Media Queries
 		margin-right  : 0;
 		margin-left   : 0;
 	}
+
+	.response-style {
+		font-size: 2.75em;
+	}
+
 	/* Gallery styles - basic spacing
 	Must have a 60px pixel gap */
 	.col,
@@ -428,6 +431,6 @@ Responsive - Media Queries
 		height     : 60vh;
 	}
 	#overlay img {
-		padding: 0 25%;
+		padding: 0 23%;
 	}
 }
